@@ -35,7 +35,9 @@
     ```sh
     http://localhost:8000/api/documentation
     ```
+![image](https://github.com/user-attachments/assets/f3c4c882-d902-4a89-a838-0045fd36f957)
 
+## SOAL TEST
 ![WhatsApp Image 2024-08-09 at 16 27 58](https://github.com/user-attachments/assets/24ca18eb-d84d-4bfe-a677-ea44fd05981b)
 ![WhatsApp Image 2024-08-09 at 16 27 59](https://github.com/user-attachments/assets/99651258-5342-42b7-80b1-623157c9a9ad)
 
