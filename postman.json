@@ -1,0 +1,404 @@
+{
+    "info": {
+        "_postman_id": "7045dd35-6d50-4b09-837c-e1e2cff43ca3",
+        "name": "United Tractors",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "29862535"
+    },
+    "item": [
+        {
+            "name": "v1",
+            "item": [
+                {
+                    "name": "Auth",
+                    "item": [
+                        {
+                            "name": "Register",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"password123\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/register",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "register"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Login",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"john.doe@example.com\",\n    \"password\": \"password123\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/login",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "login"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Logout",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/logout",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "logout"]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Category Products",
+                    "item": [
+                        {
+                            "name": "Get All Category Products",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/category-products",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "category-products"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Create Category Product",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"\",\n    \"description\": \"\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/category-products",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "category-products"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Get Category Product by ID",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/category-products/:id",
+                                    "host": ["{{base_url}}"],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "category-products",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Update Category Product",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"\",\n    \"description\": \"\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/category-products/:id",
+                                    "host": ["{{base_url}}"],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "category-products",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Delete Category Product",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/category-products/:id",
+                                    "host": ["{{base_url}}"],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "category-products",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Products",
+                    "item": [
+                        {
+                            "name": "Get All Products",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/products",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "products"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Create Product",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"\",\n    \"product_category_id\": \"\",\n    \"price\": \"\",\n    \"image\": \"\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/products",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "products"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Get Product by ID",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/products/:id",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "products", ":id"],
+                                    "variable": [
+                                        {
+                                            "key": "id"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Update Product",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"\",\n    \"product_category_id\": \"\",\n    \"price\": \"\",\n    \"image\": \"\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/products/:id",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "products", ":id"],
+                                    "variable": [
+                                        {
+                                            "key": "id"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Delete Product",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{auth_token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/products/:id",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["api", "v1", "products", ":id"],
+                                    "variable": [
+                                        {
+                                            "key": "id"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "{{auth_token}}",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000"
+        },
+        {
+            "key": "auth_token",
+            "value": "1|NzSrfirejWRqznhfif8zmt0qbaKB2Pty8mPNlf0A78b82468"
+        }
+    ]
+}
